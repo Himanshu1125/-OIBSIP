@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+</head>
+<body>
+	<h1>To-Do List</h1>
+	<form>
+		<label for="task-input">New Task:</label>
+		<input type="text" id="task-input" name="task-input">
+		<button type="button" onclick="addTask()">Add Task</button>
+	</form>
+	<ul id="task-list">
+		<li>Complete homework</li>
+		<li>Go to the gym</li>
+		<li>Buy groceries</li>
+	</ul>
+	<script>
+		function addTask() {
+			var taskInput = document.getElementById("task-input");
+			var taskList = document.getElementById("task-list");
+			var newTask = document.createElement("li");
+			newTask.innerText = taskInput.value;
+			taskList.appendChild(newTask);
+			taskInput.value = "";
+		}
+	</script>
+</body>
+</html>
